@@ -144,13 +144,13 @@ Contributions are what make the open source community such an amazing place to l
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/mconnat/faceit-api-client?style=flat-square
 [issues-url]:https://github.com/mconnat/faceit-api-client/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/mconnat/faceit-api-client?style=flat-square
 [license-url]: https://github.com/mconnat/faceit-api-client/blob/master/LICENSE.txt
