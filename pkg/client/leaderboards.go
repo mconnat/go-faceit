@@ -2,7 +2,7 @@ package client
 
 import (
 	"fmt"
-	"github.com/mconnat/faceit-api-client/pkg/models"
+	"github.com/mconnat/go-faceit/pkg/models"
 )
 
 func (c *FaceITClient) GetLeaderboardsByChampionshipID(championshipID string, params map[string]interface{}) (models.GroupLeaderboards, error) {

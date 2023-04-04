@@ -1,3 +1,3 @@
-module github.com/mconnat/faceit-api-client
+module github.com/mconnat/go-faceit
 
 go 1.20

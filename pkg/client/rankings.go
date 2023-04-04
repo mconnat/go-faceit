@@ -2,7 +2,7 @@ package client
 
 import (
 	"fmt"
-	"github.com/mconnat/faceit-api-client/pkg/models"
+	"github.com/mconnat/go-faceit/pkg/models"
 )
 
 func (c *FaceITClient) GetGameRankingByRegion(gameID string, region string, params map[string]interface{}) (models.Rankings, error) {

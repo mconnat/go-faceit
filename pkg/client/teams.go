@@ -2,7 +2,7 @@ package client
 
 import (
 	"fmt"
-	"github.com/mconnat/faceit-api-client/pkg/models"
+	"github.com/mconnat/go-faceit/pkg/models"
 )
 
 func (c *FaceITClient) GetTeamByID(teamID string, params map[string]interface{}) (models.Team, error) {

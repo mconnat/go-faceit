@@ -9,12 +9,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/mconnat/faceit-api-client">
+  <a href="https://github.com/mconnat/go-faceit">
 
 [//]: # (    <img src="images/logo.png" alt="Logo" width="80" height="80">)
   </a>
 
-<h3 align="center">Faceit API Client</h3>
+<h3 align="center">Go Faceit</h3>
 
   <p align="center">
     Wrapper for the FACEIT API in Golang
@@ -22,7 +22,7 @@
     <strong></strong>
     <br />
     <br />
-    <a href="https://github.com/mconnat/faceit-api-client/issues">Report Bug</a>
+    <a href="https://github.com/mconnat/go-faceit/issues">Report Bug</a>
   </p>
 </div>
 
@@ -60,13 +60,13 @@ This project is meant to wrap the Face IT Data API and Chat API in golang.
 
 You need a Valid API token from FaceIT
 ```
-go get github.com/mconnat/faceit-api-client
+go get github.com/mconnat/go-faceit
 
 ....
 
 import (
-	"github.com/mconnat/faceit-api-client/pkg/client"
-	"github.com/mconnat/faceit-api-client/pkg/models"
+	"github.com/mconnat/go-faceit/pkg/client"
+	"github.com/mconnat/go-faceit/pkg/models"
 )
 
 ```
@@ -151,6 +151,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 [issues-shield]: https://img.shields.io/github/issues/mconnat/faceit-api-client?style=flat-square
-[issues-url]:https://github.com/mconnat/faceit-api-client/issues
+[issues-url]:https://github.com/mconnat/go-faceit/issues
 [license-shield]: https://img.shields.io/github/license/mconnat/faceit-api-client?style=flat-square
-[license-url]: https://github.com/mconnat/faceit-api-client/blob/master/LICENSE.txt
+[license-url]: https://github.com/mconnat/go-faceit/blob/master/LICENSE.txt
