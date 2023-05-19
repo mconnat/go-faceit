@@ -2,10 +2,16 @@ package client
 
 import (
 	"fmt"
+
 	"github.com/mconnat/go-faceit/pkg/models"
 )
 
-func (c *FaceITClient) GetGames(params map[string]interface{}) (models.Games, error) {
+type GetGamesParams struct {
+	Offset int `query:"offset"`
+	Limit  int `query:"limit"`
+}
+
+func (c *FaceITClient) GetGames(params *GetGamesParams) (models.Games, error) {
 	games, err := Get(models.Games{}, c, "/games", params)
 	if err != nil {
 		return models.Games{}, err
