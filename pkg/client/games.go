@@ -19,16 +19,16 @@ func (c *FaceITClient) GetGames(params *GetGamesParams) (models.Games, error) {
 	return games, nil
 }
 
-func (c *FaceITClient) GetGameByID(gameID string, params map[string]interface{}) (models.Game, error) {
-	game, err := Get(models.Game{}, c, fmt.Sprintf("/games/%s", gameID), params)
+func (c *FaceITClient) GetGameByID(gameID string) (models.Game, error) {
+	game, err := Get(models.Game{}, c, fmt.Sprintf("/games/%s", gameID), nil)
 	if err != nil {
 		return models.Game{}, err
 	}
 	return game, nil
 }
 
-func (c *FaceITClient) GetGameParentByGameID(gameID string, params map[string]interface{}) (models.Game, error) {
-	game, err := Get(models.Game{}, c, fmt.Sprintf("/games/%s/parent", gameID), params)
+func (c *FaceITClient) GetGameParentByGameID(gameID string) (models.Game, error) {
+	game, err := Get(models.Game{}, c, fmt.Sprintf("/games/%s/parent", gameID), nil)
 	if err != nil {
 		return models.Game{}, err
 	}
