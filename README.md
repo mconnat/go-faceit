@@ -101,6 +101,8 @@ Use multiple params:
 	if err != nil {
 		log.Println(err)
 	}
+	from := time.Date(2023, 4, 01, 01, 00, 00, 00, time.Local).Unix()
+	to := time.Now().Unix()
 	params := client.GetPlayerHistoryParams{
 		Game:   "csgo",
 		From:   from,
