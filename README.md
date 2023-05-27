@@ -84,10 +84,11 @@ Use classic params:
 	if err != nil {
 		log.Println(err)
 	}
-	params := map[string]interface{}{
-		"nickname": "m0NESY",
+	params :=  client.GetPlayerParams{
+		Nickname: "m0NESY",
 	}
-	player, err := faceit.GetPlayer(params)
+
+	player, err := faceit.GetPlayer(&params)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -100,12 +101,14 @@ Use multiple params:
 	if err != nil {
 		log.Println(err)
 	}
-	params := map[string]interface{}{
-        "type":   "all",
-        "offset": "0",
-        "limit":  "20",
-        }
-	matches, err := faceit.GetMatchesByChampionshipID(championshipID, params)
+	params := client.GetPlayerHistoryParams{
+		Game:   "csgo",
+		From:   from,
+		To:     to,
+		Offset: 0,
+		Limit:  10,
+	}
+	matches, err := faceit.GetPlayerHistory(player.PlayerId, &params)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -116,14 +119,14 @@ Use expanded params:
 
 ```go
 	expandedParams := []string{"game"}
-	params := map[string]interface{}{
-		"expanded": expandedParams,
+	params := client.GetChampionshipByIDParams{
+		Expanded: expandedParams,
 	}
-	championship, err := faceit.GetChampionshipByID(championshipID, params)
+	championship, err := faceit.GetChampionshipByID("f6117c36-cbe0-4f58-99b1-9e5e91ec4741", &params)
 	if err != nil {
-        fmt.Println(err)
+		fmt.Println(err)
 	}
-        fmt.Println(matches)
+	fmt.Println(championship)
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
