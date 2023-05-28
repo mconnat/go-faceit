@@ -5,7 +5,13 @@ import (
 	"github.com/mconnat/go-faceit/pkg/models"
 )
 
-func (c *FaceITClient) GetPlayer(params map[string]interface{}) (models.Player, error) {
+type GetPlayerParams struct {
+	Nickname     string `query:"nickname"`
+	Game         string `query:"game"`
+	GamePlayerID string `query:"game_player_id"`
+}
+
+func (c *FaceITClient) GetPlayer(params *GetPlayerParams) (models.Player, error) {
 	player, err := Get(models.Player{}, c, "/players", params)
 	if err != nil {
 		return models.Player{}, err
@@ -13,19 +19,23 @@ func (c *FaceITClient) GetPlayer(params map[string]interface{}) (models.Player, 
 	return player, nil
 }
 
-func (c *FaceITClient) GetPlayerByID(playerID string, params map[string]interface{}) (models.Player, error) {
-	player, err := Get(models.Player{}, c, fmt.Sprintf("/players/%s", playerID), params)
+func (c *FaceITClient) GetPlayerByID(playerID string) (models.Player, error) {
+	player, err := Get(models.Player{}, c, fmt.Sprintf("/players/%s", playerID), nil)
 	if err != nil {
 		return models.Player{}, err
 	}
 	return player, nil
 }
 
-func (c *FaceITClient) GetPlayerHistory(playerID string, game string, params map[string]interface{}) (models.PlayerHistory, error) {
-	if params == nil {
-		params = make(map[string]interface{}, 1)
-	}
-	params["game"] = game
+type GetPlayerHistoryParams struct {
+	Game   string `query:"game"`
+	From   int64  `query:"from"`
+	To     int64  `query:"to"`
+	Offset int    `query:"offset"`
+	Limit  int    `query:"limit"`
+}
+
+func (c *FaceITClient) GetPlayerHistory(playerID string, params *GetPlayerHistoryParams) (models.PlayerHistory, error) {
 	player, err := Get(models.PlayerHistory{}, c, fmt.Sprintf("/players/%s/history", playerID), params)
 	if err != nil {
 		return models.PlayerHistory{}, err
@@ -33,7 +43,12 @@ func (c *FaceITClient) GetPlayerHistory(playerID string, game string, params map
 	return player, nil
 }
 
-func (c *FaceITClient) GetPlayerHubs(playerID string, params map[string]interface{}) (models.Hubs, error) {
+type GetPlayerHubsParams struct {
+	Offset int `query:"offset"`
+	Limit  int `query:"limit"`
+}
+
+func (c *FaceITClient) GetPlayerHubs(playerID string, params *GetPlayerHubsParams) (models.Hubs, error) {
 	playerHubs, err := Get(models.Hubs{}, c, fmt.Sprintf("/players/%s/hubs", playerID), params)
 	if err != nil {
 		return models.Hubs{}, err
@@ -41,15 +56,20 @@ func (c *FaceITClient) GetPlayerHubs(playerID string, params map[string]interfac
 	return playerHubs, nil
 }
 
-func (c *FaceITClient) GetPlayerStatsByGame(playerID string, game string, params map[string]interface{}) (models.PlayerStats, error) {
-	stats, err := Get(models.PlayerStats{}, c, fmt.Sprintf("/players/%s/stats/%s", playerID, game), params)
+func (c *FaceITClient) GetPlayerStatsByGame(playerID string, game string) (models.PlayerStats, error) {
+	stats, err := Get(models.PlayerStats{}, c, fmt.Sprintf("/players/%s/stats/%s", playerID, game), nil)
 	if err != nil {
 		return models.PlayerStats{}, err
 	}
 	return stats, nil
 }
 
-func (c *FaceITClient) GetPlayerTournaments(playerID string, params map[string]interface{}) (models.Tournaments, error) {
+type GetPlayerTournamentsParams struct {
+	Offset int `query:"offset"`
+	Limit  int `query:"limit"`
+}
+
+func (c *FaceITClient) GetPlayerTournaments(playerID string, params *GetPlayerTournamentsParams) (models.Tournaments, error) {
 	tournaments, err := Get(models.Tournaments{}, c, fmt.Sprintf("/players/%s/tournaments", playerID), params)
 	if err != nil {
 		return models.Tournaments{}, err

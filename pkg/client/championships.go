@@ -20,7 +20,11 @@ func (c *FaceITClient) GetChampionshipsByGameID(gameID string, params map[string
 	return championships, nil
 }
 
-func (c *FaceITClient) GetChampionshipByID(championshipID string, params map[string]interface{}) (models.Championship, error) {
+type GetChampionshipByIDParams struct {
+	Expanded []string `query:"expanded"`
+}
+
+func (c *FaceITClient) GetChampionshipByID(championshipID string, params *GetChampionshipByIDParams) (models.Championship, error) {
 	if championshipID == "" {
 		return models.Championship{}, fmt.Errorf("championshipID undefined")
 	}
