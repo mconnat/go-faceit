@@ -49,6 +49,14 @@ func (c *FaceITClient) GetPlayerStatsByGame(playerID string, game string, params
 	return stats, nil
 }
 
+func (c *FaceITClient) GetPlayersLastMatchesStats(playerID string, game string, params map[string]interface{}) (models.PlayerMatchResponse, error) {
+	stats, err := Get(models.PlayerMatchResponse{}, c, fmt.Sprintf("/players/%s/games/%s/stats", playerID, game), params)
+	if err != nil {
+		return models.PlayerMatchResponse{}, err
+	}
+	return stats, nil
+}
+
 func (c *FaceITClient) GetPlayerTournaments(playerID string, params map[string]interface{}) (models.Tournaments, error) {
 	tournaments, err := Get(models.Tournaments{}, c, fmt.Sprintf("/players/%s/tournaments", playerID), params)
 	if err != nil {
