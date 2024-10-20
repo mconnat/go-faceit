@@ -13,10 +13,10 @@ func (c *FaceITClient) GetTeamByID(teamID string, params map[string]interface{})
 	return team, nil
 }
 
-func (c *FaceITClient) GetTeamStats(teamID string, gameID string, params map[string]interface{}) (models.TeamStats, error) {
-	stats, err := Get(models.TeamStats{}, c, fmt.Sprintf("/teams/%s/stats/%s", teamID, gameID), params)
+func (c *FaceITClient) GetTeamStats(teamID string, gameID string, params map[string]interface{}) (models.TeamStatsResponse, error) {
+	stats, err := Get(models.TeamStatsResponse{}, c, fmt.Sprintf("/teams/%s/stats/%s", teamID, gameID), params)
 	if err != nil {
-		return models.TeamStats{}, err
+		return models.TeamStatsResponse{}, err
 	}
 	return stats, nil
 }
