@@ -51,6 +51,15 @@ type Match struct {
 		Type        string `json:"type"`
 	} `json:"teams"`
 	Version int `json:"version"`
+	Voting  Voting `json:"voting"`
+}
+
+type Voting struct {
+	Map MapStruct `json:"map"`
+}
+
+type MapStruct struct {
+	Pick []string `json:"pick"`
 }
 
 type MatchStats struct {
