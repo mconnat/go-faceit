@@ -1,4 +1,4 @@
-# {{classname}}
+# \TeamsApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**GetTeam**](TeamsApi.md#GetTeam) | **Get** /teams/{team_id} | Retrieve team details
 [**GetTeamStats**](TeamsApi.md#GetTeamStats) | **Get** /teams/{team_id}/stats/{game_id} | Retrieve statistics of a team
 [**GetTeamTournaments**](TeamsApi.md#GetTeamTournaments) | **Get** /teams/{team_id}/tournaments | Retrieve tournaments of a team
+
 
 # **GetTeam**
 > Team GetTeam(ctx, teamId)
@@ -31,7 +32,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -60,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -81,6 +82,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a TeamsApiGetTeamTournamentsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -97,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

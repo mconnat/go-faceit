@@ -1,4 +1,4 @@
-# {{classname}}
+# \SearchApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**SearchPlayers**](SearchApi.md#SearchPlayers) | **Get** /search/players | Search for players
 [**SearchTeams**](SearchApi.md#SearchTeams) | **Get** /search/teams | Search for teams
 [**SearchTournaments**](SearchApi.md#SearchTournaments) | **Get** /search/tournaments | Search for tournaments
+
 
 # **SearchChampionships**
 > CompetitionsSearchList SearchChampionships(ctx, name, optional)
@@ -28,6 +29,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a SearchApiSearchChampionshipsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -47,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -68,6 +70,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a SearchApiSearchClansOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -86,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -107,6 +110,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a SearchApiSearchHubsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -125,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -146,6 +150,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a SearchApiSearchOrganizersOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -162,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -183,6 +188,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a SearchApiSearchPlayersOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -201,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -222,6 +228,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a SearchApiSearchTeamsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -239,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -260,6 +267,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a SearchApiSearchTournamentsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -279,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

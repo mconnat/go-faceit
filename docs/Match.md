@@ -28,7 +28,8 @@ Name | Type | Description | Notes
 **Status** | **string** |  | [optional] [default to null]
 **Teams** | [**map[string]Faction**](Faction.md) |  | [optional] [default to null]
 **Version** | **int64** |  | [optional] [default to null]
-**Voting** | [***interface{}**](interface{}.md) |  | [optional] [default to null]
+**Voting** | **interface{}** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

@@ -1,4 +1,4 @@
-# {{classname}}
+# \MatchesApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetMatch**](MatchesApi.md#GetMatch) | **Get** /matches/{match_id} | Retrieve match details
 [**GetMatchStats**](MatchesApi.md#GetMatchStats) | **Get** /matches/{match_id}/stats | Retrieve statistics of a match
+
 
 # **GetMatch**
 > Match GetMatch(ctx, matchId)
@@ -30,7 +31,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -58,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

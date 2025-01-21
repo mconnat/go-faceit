@@ -1,10 +1,11 @@
-# {{classname}}
+# \MatchmakingsApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetMatchmaking**](MatchmakingsApi.md#GetMatchmaking) | **Get** /matchmakings/{matchmaking_id} | Retrieve details of a matchmaking of a game on FACEIT
+
 
 # **GetMatchmaking**
 > Matchmaking GetMatchmaking(ctx, matchmakingId)
@@ -29,7 +30,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

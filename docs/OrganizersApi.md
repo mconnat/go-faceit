@@ -1,4 +1,4 @@
-# {{classname}}
+# \OrganizersApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**GetOrganizerGames**](OrganizersApi.md#GetOrganizerGames) | **Get** /organizers/{organizer_id}/games | Retrieve all games an organizer is involved with
 [**GetOrganizerHubs**](OrganizersApi.md#GetOrganizerHubs) | **Get** /organizers/{organizer_id}/hubs | Retrieve all hubs of an organizer
 [**GetOrganizerTournaments**](OrganizersApi.md#GetOrganizerTournaments) | **Get** /organizers/{organizer_id}/tournaments | Retrieve all tournaments of an organizer
+
 
 # **GetOrganizer**
 > Organizer GetOrganizer(ctx, organizerId)
@@ -34,7 +35,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -62,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -83,6 +84,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a OrganizersApiGetOrganizerChampionshipsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -99,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -127,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -148,6 +150,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a OrganizersApiGetOrganizerHubsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -164,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -185,6 +188,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a OrganizersApiGetOrganizerTournamentsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -202,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -1,4 +1,4 @@
-# {{classname}}
+# \LeaderboardsApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**GetHubSeasonRanking**](LeaderboardsApi.md#GetHubSeasonRanking) | **Get** /leaderboards/hubs/{hub_id}/seasons/{season} | Retrieve seasonal ranking of a hub
 [**GetLeaderboard**](LeaderboardsApi.md#GetLeaderboard) | **Get** /leaderboards/{leaderboard_id} | Retrieve ranking from a leaderboard id
 [**GetPlayerRankingInLeaderboard**](LeaderboardsApi.md#GetPlayerRankingInLeaderboard) | **Get** /leaderboards/{leaderboard_id}/players/{player_id} | Retrieve a players ranking in a leaderboard
+
 
 # **GetChampionshipGroupRanking**
 > EntityRanking GetChampionshipGroupRanking(ctx, championshipId, group, optional)
@@ -29,6 +30,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a LeaderboardsApiGetChampionshipGroupRankingOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -46,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -67,6 +69,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a LeaderboardsApiGetChampionshipLeaderboardsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -83,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -104,6 +107,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a LeaderboardsApiGetHubLeaderboardsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -120,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -141,6 +145,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a LeaderboardsApiGetHubRankingOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -157,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -179,6 +184,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a LeaderboardsApiGetHubSeasonRankingOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -196,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -217,6 +223,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a LeaderboardsApiGetLeaderboardOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -233,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -262,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

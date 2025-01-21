@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **FirstName** | **string** |  | [optional] [default to null]
 **FriendsIds** | **[]string** |  | [optional] [default to null]
 **Games** | [**map[string]GameDetail**](GameDetail.md) |  | [optional] [default to null]
-**Infractions** | [***interface{}**](interface{}.md) | Deprecated: no more in use | [optional] [default to null]
+**Infractions** | **interface{}** | Deprecated: no more in use | [optional] [default to null]
 **LastName** | **string** |  | [optional] [default to null]
 **MembershipType** | **string** | Deprecated: use memberships instead | [optional] [default to null]
 **Memberships** | **[]string** |  | [optional] [default to null]
@@ -29,4 +29,5 @@ Name | Type | Description | Notes
 **Verified** | **bool** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

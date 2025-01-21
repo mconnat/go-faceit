@@ -1,4 +1,4 @@
-# {{classname}}
+# \HubsApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**GetHubRoles**](HubsApi.md#GetHubRoles) | **Get** /hubs/{hub_id}/roles | Retrieve all roles members can have in a hub
 [**GetHubRules**](HubsApi.md#GetHubRules) | **Get** /hubs/{hub_id}/rules | Retrieve rules of a hub
 [**GetHubStats**](HubsApi.md#GetHubStats) | **Get** /hubs/{hub_id}/stats | Retrieve statistics of a hub
+
 
 # **GetHub**
 > Hub GetHub(ctx, hubId, optional)
@@ -27,6 +28,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a HubsApiGetHubOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -42,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -63,6 +65,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a HubsApiGetHubMatchesOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -80,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -101,6 +104,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a HubsApiGetHubMembersOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -117,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -138,6 +142,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a HubsApiGetHubRolesOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -154,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -182,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -203,6 +208,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a HubsApiGetHubStatsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -219,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

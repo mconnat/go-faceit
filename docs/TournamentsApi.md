@@ -1,4 +1,4 @@
-# {{classname}}
+# \TournamentsApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**GetTournamentMatches**](TournamentsApi.md#GetTournamentMatches) | **Get** /tournaments/{tournament_id}/matches | Retrieve all matches of a tournament
 [**GetTournamentTeams**](TournamentsApi.md#GetTournamentTeams) | **Get** /tournaments/{tournament_id}/teams | Retrieve all teams of a tournament
 [**GetTournamentsList**](TournamentsApi.md#GetTournamentsList) | **Get** /tournaments | Retrieve tournaments v1 (no longer used)
+
 
 # **GetTournament**
 > Tournament GetTournament(ctx, tournamentId, optional)
@@ -26,6 +27,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a TournamentsApiGetTournamentOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -41,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -69,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -90,6 +92,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a TournamentsApiGetTournamentMatchesOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -106,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -127,6 +130,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a TournamentsApiGetTournamentTeamsOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -143,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -163,6 +167,7 @@ Name | Type | Description  | Notes
 
 ### Optional Parameters
 Optional parameters are passed through a pointer to a TournamentsApiGetTournamentsListOpts struct
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **game** | **optional.String**| A game on FACEIT | 
@@ -180,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

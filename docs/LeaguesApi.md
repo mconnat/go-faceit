@@ -1,4 +1,4 @@
-# {{classname}}
+# \LeaguesApi
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**GetLeagueById**](LeaguesApi.md#GetLeagueById) | **Get** /leagues/{league_id} | Retrieve details of a league of a matchmaking on FACEIT
 [**GetLeagueSeason**](LeaguesApi.md#GetLeagueSeason) | **Get** /leagues/{league_id}/seasons/{season_id} | Retrieve details of a season of a league on FACEIT
 [**GetPlayerForLeagueSeason**](LeaguesApi.md#GetPlayerForLeagueSeason) | **Get** /leagues/{league_id}/seasons/{season_id}/players/{player_id} | Retrieve details of a player for a given league and season on FACEIT
+
 
 # **GetLeagueById**
 > League GetLeagueById(ctx, leagueId)
@@ -31,7 +32,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -60,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -90,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
