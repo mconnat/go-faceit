@@ -9,6 +9,14 @@
 
 package faceit
 
+type PluginConfigLinux struct {
+	// allow all devices
+	AllowAllDevices bool `json:"AllowAllDevices"`
+	// capabilities
+	Capabilities []string `json:"Capabilities"`
+	// devices
+	Devices []PluginDevice `json:"Devices"`
+}
 type PluginConfig struct {
 	Args *PluginConfigArgs `json:"Args"`
 	// description
@@ -20,20 +28,20 @@ type PluginConfig struct {
 	// entrypoint
 	Entrypoint []string `json:"Entrypoint"`
 	// env
-	Env []PluginEnv `json:"Env"`
+	Env        []PluginEnv            `json:"Env"`
 	Interface_ *PluginConfigInterface `json:"Interface"`
 	// ipc host
-	IpcHost bool `json:"IpcHost"`
-	Linux *PluginConfigLinux `json:"Linux"`
+	IpcHost bool               `json:"IpcHost"`
+	Linux   *PluginConfigLinux `json:"Linux"`
 	// mounts
-	Mounts []PluginMount `json:"Mounts"`
+	Mounts  []PluginMount        `json:"Mounts"`
 	Network *PluginConfigNetwork `json:"Network"`
 	// pid host
 	PidHost bool `json:"PidHost"`
 	// propagated mount
-	PropagatedMount string `json:"PropagatedMount"`
-	User *PluginConfigUser `json:"User,omitempty"`
+	PropagatedMount string            `json:"PropagatedMount"`
+	User            *PluginConfigUser `json:"User,omitempty"`
 	// work dir
-	WorkDir string `json:"WorkDir"`
-	Rootfs *PluginConfigRootfs `json:"rootfs,omitempty"`
+	WorkDir string              `json:"WorkDir"`
+	Rootfs  *PluginConfigRootfs `json:"rootfs,omitempty"`
 }
