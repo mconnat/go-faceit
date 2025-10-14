@@ -1,39 +1,69 @@
-# \GamesApi
+# \GamesAPI
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAllGames**](GamesApi.md#GetAllGames) | **Get** /games | Retrieve details of all games on FACEIT
-[**GetGame**](GamesApi.md#GetGame) | **Get** /games/{game_id} | Retrieve game details
-[**GetGameMatchmakings**](GamesApi.md#GetGameMatchmakings) | **Get** /games/{gameId}/matchmakings | Retrieve details of all matchmakings of a game on FACEIT
-[**GetParentGame**](GamesApi.md#GetParentGame) | **Get** /games/{game_id}/parent | Retrieve the details of the parent game, if the game is region-specific
-[**GetQueueBans**](GamesApi.md#GetQueueBans) | **Get** /games/{game_id}/queues/{queue_id}/bans | Retrieve queue bans on FACEIT
-[**GetQueueById**](GamesApi.md#GetQueueById) | **Get** /games/{game_id}/queues/{queue_id} | Retrieve details of a queue on FACEIT
-[**GetQueuesByEntityFilters**](GamesApi.md#GetQueuesByEntityFilters) | **Get** /games/{game_id}/queues | Retrieve queues by filters on FACEIT
-[**GetQueuesByRegion**](GamesApi.md#GetQueuesByRegion) | **Get** /games/{game_id}/regions/{region_id}/queues | Retrieve queues by region on FACEIT
+[**GetAllGames**](GamesAPI.md#GetAllGames) | **Get** /games | Retrieve details of all games on FACEIT
+[**GetGame**](GamesAPI.md#GetGame) | **Get** /games/{game_id} | Retrieve game details
+[**GetGameMatchmakings**](GamesAPI.md#GetGameMatchmakings) | **Get** /games/{gameId}/matchmakings | Retrieve details of all matchmakings of a game on FACEIT
+[**GetParentGame**](GamesAPI.md#GetParentGame) | **Get** /games/{game_id}/parent | Retrieve the details of the parent game, if the game is region-specific
+[**GetQueueBans**](GamesAPI.md#GetQueueBans) | **Get** /games/{game_id}/queues/{queue_id}/bans | Retrieve queue bans on FACEIT
+[**GetQueueById**](GamesAPI.md#GetQueueById) | **Get** /games/{game_id}/queues/{queue_id} | Retrieve details of a queue on FACEIT
+[**GetQueuesByEntityFilters**](GamesAPI.md#GetQueuesByEntityFilters) | **Get** /games/{game_id}/queues | Retrieve queues by filters on FACEIT
+[**GetQueuesByRegion**](GamesAPI.md#GetQueuesByRegion) | **Get** /games/{game_id}/regions/{region_id}/queues | Retrieve queues by region on FACEIT
 
 
-# **GetAllGames**
-> GamesList GetAllGames(ctx, optional)
+
+## GetAllGames
+
+> GamesList GetAllGames(ctx).Offset(offset).Limit(limit).Execute()
+
 Retrieve details of all games on FACEIT
 
-Retrieve details of all games on FACEIT
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	offset := int32(56) // int32 | The starting item position (optional) (default to 0)
+	limit := int32(56) // int32 | The number of items to return (optional) (default to 20)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetAllGames(context.Background()).Offset(offset).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetAllGames``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetAllGames`: GamesList
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetAllGames`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetAllGamesRequest struct via the builder pattern
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GamesApiGetAllGamesOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a GamesApiGetAllGamesOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **offset** | **optional.Int32**| The starting item position | [default to 0]
- **limit** | **optional.Int32**| The number of items to return | [default to 20]
+ **offset** | **int32** | The starting item position | [default to 0]
+ **limit** | **int32** | The number of items to return | [default to 20]
 
 ### Return type
 
@@ -45,23 +75,65 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-# **GetGame**
-> Game GetGame(ctx, gameId)
+
+## GetGame
+
+> Game GetGame(ctx, gameId).Execute()
+
 Retrieve game details
 
-Retrieve game details
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	gameId := "gameId_example" // string | The id of the game
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetGame(context.Background(), gameId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetGame``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGame`: Game
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetGame`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **gameId** | **string**| The id of the game | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**gameId** | **string** | The id of the game | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetGameRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -73,34 +145,71 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-# **GetGameMatchmakings**
-> MatchmakingList GetGameMatchmakings(ctx, gameId, optional)
+
+## GetGameMatchmakings
+
+> MatchmakingList GetGameMatchmakings(ctx, gameId).Region(region).Offset(offset).Limit(limit).Execute()
+
 Retrieve details of all matchmakings of a game on FACEIT
 
-Retrieve details of all matchmakings of a game on FACEIT
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	gameId := "gameId_example" // string | The id of the game
+	region := "region_example" // string | The region of the matchmakings (optional)
+	offset := int32(56) // int32 | The starting item position (optional) (default to 0)
+	limit := int32(56) // int32 | The number of items to return (optional) (default to 20)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetGameMatchmakings(context.Background(), gameId).Region(region).Offset(offset).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetGameMatchmakings``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGameMatchmakings`: MatchmakingList
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetGameMatchmakings`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **gameId** | **string**| The id of the game | 
- **optional** | ***GamesApiGetGameMatchmakingsOpts** | optional parameters | nil if no parameters
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**gameId** | **string** | The id of the game | 
 
-### Optional Parameters
-Optional parameters are passed through a pointer to a GamesApiGetGameMatchmakingsOpts struct
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetGameMatchmakingsRequest struct via the builder pattern
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **region** | **optional.String**| The region of the matchmakings | 
- **offset** | **optional.Int32**| The starting item position | [default to 0]
- **limit** | **optional.Int32**| The number of items to return | [default to 20]
+ **region** | **string** | The region of the matchmakings | 
+ **offset** | **int32** | The starting item position | [default to 0]
+ **limit** | **int32** | The number of items to return | [default to 20]
 
 ### Return type
 
@@ -112,23 +221,65 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-# **GetParentGame**
-> Game GetParentGame(ctx, gameId)
+
+## GetParentGame
+
+> Game GetParentGame(ctx, gameId).Execute()
+
 Retrieve the details of the parent game, if the game is region-specific
 
-Retrieve the details of the parent game, if the game is region-specific
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	gameId := "gameId_example" // string | The id of the game
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetParentGame(context.Background(), gameId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetParentGame``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetParentGame`: Game
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetParentGame`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **gameId** | **string**| The id of the game | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**gameId** | **string** | The id of the game | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetParentGameRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 
@@ -140,35 +291,72 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-# **GetQueueBans**
-> QueueBansList GetQueueBans(ctx, gameId, queueId, optional)
+
+## GetQueueBans
+
+> QueueBansList GetQueueBans(ctx, gameId, queueId).Offset(offset).Limit(limit).Execute()
+
 Retrieve queue bans on FACEIT
 
-Retrieve queue bans on FACEIT. Available only for game or queue owners(organizers)
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	gameId := "gameId_example" // string | The id of the game
+	queueId := "queueId_example" // string | The id of the queue
+	offset := int32(56) // int32 | The starting item position (optional) (default to 0)
+	limit := int32(56) // int32 | The number of items to return (optional) (default to 20)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetQueueBans(context.Background(), gameId, queueId).Offset(offset).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetQueueBans``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetQueueBans`: QueueBansList
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetQueueBans`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **gameId** | **string**| The id of the game | 
-  **queueId** | **string**| The id of the queue | 
- **optional** | ***GamesApiGetQueueBansOpts** | optional parameters | nil if no parameters
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**gameId** | **string** | The id of the game | 
+**queueId** | **string** | The id of the queue | 
 
-### Optional Parameters
-Optional parameters are passed through a pointer to a GamesApiGetQueueBansOpts struct
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetQueueBansRequest struct via the builder pattern
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **offset** | **optional.Int32**| The starting item position | [default to 0]
- **limit** | **optional.Int32**| The number of items to return | [default to 20]
+ **offset** | **int32** | The starting item position | [default to 0]
+ **limit** | **int32** | The number of items to return | [default to 20]
 
 ### Return type
 
@@ -180,24 +368,68 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-# **GetQueueById**
-> Queue GetQueueById(ctx, gameId, queueId)
+
+## GetQueueById
+
+> Queue GetQueueById(ctx, gameId, queueId).Execute()
+
 Retrieve details of a queue on FACEIT
 
-Retrieve details of a queue on FACEIT. Available only for game or queue owners(organizers)
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	gameId := "gameId_example" // string | The id of the game
+	queueId := "queueId_example" // string | The id of the queue
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetQueueById(context.Background(), gameId, queueId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetQueueById``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetQueueById`: Queue
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetQueueById`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **gameId** | **string**| The id of the game | 
-  **queueId** | **string**| The id of the queue | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**gameId** | **string** | The id of the game | 
+**queueId** | **string** | The id of the queue | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetQueueByIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
 
 ### Return type
 
@@ -209,37 +441,73 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-# **GetQueuesByEntityFilters**
-> QueuesList GetQueuesByEntityFilters(ctx, gameId, entityType, entityId, optional)
+
+## GetQueuesByEntityFilters
+
+> QueuesList GetQueuesByEntityFilters(ctx, gameId).EntityType(entityType).EntityId(entityId).Offset(offset).Limit(limit).Execute()
+
 Retrieve queues by filters on FACEIT
 
-Retrieve queues by filters on FACEIT. Available only for game developers and queue owners(organizers)
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	gameId := "gameId_example" // string | The id of the game
+	entityType := "entityType_example" // string | The type of the entity
+	entityId := "entityId_example" // string | The id of the entity
+	offset := int32(56) // int32 | The starting item position (optional) (default to 0)
+	limit := int32(56) // int32 | The number of items to return (optional) (default to 20)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetQueuesByEntityFilters(context.Background(), gameId).EntityType(entityType).EntityId(entityId).Offset(offset).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetQueuesByEntityFilters``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetQueuesByEntityFilters`: QueuesList
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetQueuesByEntityFilters`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **gameId** | **string**| The id of the game | 
-  **entityType** | **string**| The type of the entity | 
-  **entityId** | **string**| The id of the entity | 
- **optional** | ***GamesApiGetQueuesByEntityFiltersOpts** | optional parameters | nil if no parameters
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**gameId** | **string** | The id of the game | 
 
-### Optional Parameters
-Optional parameters are passed through a pointer to a GamesApiGetQueuesByEntityFiltersOpts struct
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetQueuesByEntityFiltersRequest struct via the builder pattern
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
-
- **offset** | **optional.Int32**| The starting item position | [default to 0]
- **limit** | **optional.Int32**| The number of items to return | [default to 20]
+ **entityType** | **string** | The type of the entity | 
+ **entityId** | **string** | The id of the entity | 
+ **offset** | **int32** | The starting item position | [default to 0]
+ **limit** | **int32** | The number of items to return | [default to 20]
 
 ### Return type
 
@@ -251,35 +519,72 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-# **GetQueuesByRegion**
-> QueuesList GetQueuesByRegion(ctx, gameId, regionId, optional)
+
+## GetQueuesByRegion
+
+> QueuesList GetQueuesByRegion(ctx, gameId, regionId).Offset(offset).Limit(limit).Execute()
+
 Retrieve queues by region on FACEIT
 
-Retrieve queues by region on FACEIT. Available only for game developers
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	gameId := "gameId_example" // string | The id of the game
+	regionId := "regionId_example" // string | The id of the region
+	offset := int32(56) // int32 | The starting item position (optional) (default to 0)
+	limit := int32(56) // int32 | The number of items to return (optional) (default to 20)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.GamesAPI.GetQueuesByRegion(context.Background(), gameId, regionId).Offset(offset).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `GamesAPI.GetQueuesByRegion``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetQueuesByRegion`: QueuesList
+	fmt.Fprintf(os.Stdout, "Response from `GamesAPI.GetQueuesByRegion`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **gameId** | **string**| The id of the game | 
-  **regionId** | **string**| The id of the region | 
- **optional** | ***GamesApiGetQueuesByRegionOpts** | optional parameters | nil if no parameters
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**gameId** | **string** | The id of the game | 
+**regionId** | **string** | The id of the region | 
 
-### Optional Parameters
-Optional parameters are passed through a pointer to a GamesApiGetQueuesByRegionOpts struct
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetQueuesByRegionRequest struct via the builder pattern
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **offset** | **optional.Int32**| The starting item position | [default to 0]
- **limit** | **optional.Int32**| The number of items to return | [default to 20]
+ **offset** | **int32** | The starting item position | [default to 0]
+ **limit** | **int32** | The number of items to return | [default to 20]
 
 ### Return type
 
@@ -291,8 +596,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
