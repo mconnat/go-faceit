@@ -2,17 +2,17 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetPlayer**](PlayersAPI.md#GetPlayer) | **Get** /players/{player_id} | Retrieve player details
-[**GetPlayerBans**](PlayersAPI.md#GetPlayerBans) | **Get** /players/{player_id}/bans | Retrieve all bans of a player
-[**GetPlayerFromLookup**](PlayersAPI.md#GetPlayerFromLookup) | **Get** /players | Retrieve player details
-[**GetPlayerHistory**](PlayersAPI.md#GetPlayerHistory) | **Get** /players/{player_id}/history | Retrieve all matches of a player
-[**GetPlayerHubs**](PlayersAPI.md#GetPlayerHubs) | **Get** /players/{player_id}/hubs | Retrieve all hubs of a player
-[**GetPlayerStats**](PlayersAPI.md#GetPlayerStats) | **Get** /players/{player_id}/games/{game_id}/stats | Retrieve statistics of a player for a given amount of matches
-[**GetPlayerStats_0**](PlayersAPI.md#GetPlayerStats_0) | **Get** /players/{player_id}/stats/{game_id} | Retrieve statistics of a player
-[**GetPlayerTeams**](PlayersAPI.md#GetPlayerTeams) | **Get** /players/{player_id}/teams | Retrieve all teams of a player
-[**GetPlayerTournaments**](PlayersAPI.md#GetPlayerTournaments) | **Get** /players/{player_id}/tournaments | Retrieve all tournaments of a player
+| Method                                                         | HTTP request                                       | Description                                                   |
+| -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------- |
+| [**GetPlayer**](PlayersAPI.md#GetPlayer)                       | **Get** /players/{player_id}                       | Retrieve player details                                       |
+| [**GetPlayerBans**](PlayersAPI.md#GetPlayerBans)               | **Get** /players/{player_id}/bans                  | Retrieve all bans of a player                                 |
+| [**GetPlayerFromLookup**](PlayersAPI.md#GetPlayerFromLookup)   | **Get** /players                                   | Retrieve player details                                       |
+| [**GetPlayerHistory**](PlayersAPI.md#GetPlayerHistory)         | **Get** /players/{player_id}/history               | Retrieve all matches of a player                              |
+| [**GetPlayerHubs**](PlayersAPI.md#GetPlayerHubs)               | **Get** /players/{player_id}/hubs                  | Retrieve all hubs of a player                                 |
+| [**GetPlayerStats**](PlayersAPI.md#GetPlayerStats)             | **Get** /players/{player_id}/games/{game_id}/stats | Retrieve statistics of a player for a given amount of matches |
+| [**GetPlayerStats_0**](PlayersAPI.md#GetPlayerStats_0)         | **Get** /players/{player_id}/stats/{game_id}       | Retrieve statistics of a player                               |
+| [**GetPlayerTeams**](PlayersAPI.md#GetPlayerTeams)             | **Get** /players/{player_id}/teams                 | Retrieve all teams of a player                                |
+| [**GetPlayerTournaments**](PlayersAPI.md#GetPlayerTournaments) | **Get** /players/{player_id}/tournaments           | Retrieve all tournaments of a player                          |
 
 
 
@@ -33,7 +33,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -54,18 +54,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type
@@ -103,7 +103,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -126,18 +126,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerBansRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -177,7 +177,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -206,11 +206,11 @@ func main() {
 Other parameters are passed through a pointer to a apiGetPlayerFromLookupRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **nickname** | **string** | The nickname of the player on FACEIT | 
- **game** | **string** | A game on FACEIT | 
- **gamePlayerId** | **string** | The ID of a player on game&#39;s platform | 
+| Name             | Type       | Description                               | Notes |
+| ---------------- | ---------- | ----------------------------------------- | ----- |
+| **nickname**     | **string** | The nickname of the player on FACEIT      |
+| **game**         | **string** | A game on FACEIT                          |
+| **gamePlayerId** | **string** | The ID of a player on game&#39;s platform |
 
 ### Return type
 
@@ -247,7 +247,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -273,18 +273,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerHistoryRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **game** | **string** | A game on FACEIT | 
  **from** | **int32** | The timestamp (Unix time) as lower bound of the query. 1 month ago if not specified | 
@@ -327,7 +327,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -350,18 +350,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerHubsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 50]
@@ -401,7 +401,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -427,19 +427,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
-**gameId** | **string** | A game on FACEIT | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
+| **gameId**   | **string**          | A game on FACEIT                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerStatsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
  **offset** | **int32** | The starting item position | [default to 0]
@@ -482,7 +482,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -504,19 +504,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
-**gameId** | **string** | A game on FACEIT | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
+| **gameId**   | **string**          | A game on FACEIT                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerStats_1Request struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 
@@ -555,7 +555,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -578,18 +578,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerTeamsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -629,7 +629,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -652,18 +652,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**playerId** | **string** | The id of the player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **playerId** | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerTournamentsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]

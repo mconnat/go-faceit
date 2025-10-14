@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetTeam**](TeamsAPI.md#GetTeam) | **Get** /teams/{team_id} | Retrieve team details
-[**GetTeamStats**](TeamsAPI.md#GetTeamStats) | **Get** /teams/{team_id}/stats/{game_id} | Retrieve statistics of a team
-[**GetTeamTournaments**](TeamsAPI.md#GetTeamTournaments) | **Get** /teams/{team_id}/tournaments | Retrieve tournaments of a team
+| Method                                                   | HTTP request                             | Description                    |
+| -------------------------------------------------------- | ---------------------------------------- | ------------------------------ |
+| [**GetTeam**](TeamsAPI.md#GetTeam)                       | **Get** /teams/{team_id}                 | Retrieve team details          |
+| [**GetTeamStats**](TeamsAPI.md#GetTeamStats)             | **Get** /teams/{team_id}/stats/{game_id} | Retrieve statistics of a team  |
+| [**GetTeamTournaments**](TeamsAPI.md#GetTeamTournaments) | **Get** /teams/{team_id}/tournaments     | Retrieve tournaments of a team |
 
 
 
@@ -27,7 +27,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -48,18 +48,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**teamId** | **string** | The id of the team | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **teamId** | **string**          | The id of the team                                                          |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTeamRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type
@@ -97,7 +97,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -119,19 +119,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**teamId** | **string** | The id of the team | 
-**gameId** | **string** | A game on FACEIT | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **teamId** | **string**          | The id of the team                                                          |
+| **gameId** | **string**          | A game on FACEIT                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTeamStatsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 
@@ -170,7 +170,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -193,18 +193,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**teamId** | **string** | The id of the team | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **teamId** | **string**          | The id of the team                                                          |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTeamTournamentsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]

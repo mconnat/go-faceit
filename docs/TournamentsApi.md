@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetTournament**](TournamentsAPI.md#GetTournament) | **Get** /tournaments/{tournament_id} | Retrieve tournament details
-[**GetTournamentBrackets**](TournamentsAPI.md#GetTournamentBrackets) | **Get** /tournaments/{tournament_id}/brackets | Retrieve brackets of a tournament
-[**GetTournamentMatches**](TournamentsAPI.md#GetTournamentMatches) | **Get** /tournaments/{tournament_id}/matches | Retrieve all matches of a tournament
-[**GetTournamentTeams**](TournamentsAPI.md#GetTournamentTeams) | **Get** /tournaments/{tournament_id}/teams | Retrieve all teams of a tournament
-[**GetTournamentsList**](TournamentsAPI.md#GetTournamentsList) | **Get** /tournaments | Retrieve tournaments v1 (no longer used)
+| Method                                                               | HTTP request                                  | Description                              |
+| -------------------------------------------------------------------- | --------------------------------------------- | ---------------------------------------- |
+| [**GetTournament**](TournamentsAPI.md#GetTournament)                 | **Get** /tournaments/{tournament_id}          | Retrieve tournament details              |
+| [**GetTournamentBrackets**](TournamentsAPI.md#GetTournamentBrackets) | **Get** /tournaments/{tournament_id}/brackets | Retrieve brackets of a tournament        |
+| [**GetTournamentMatches**](TournamentsAPI.md#GetTournamentMatches)   | **Get** /tournaments/{tournament_id}/matches  | Retrieve all matches of a tournament     |
+| [**GetTournamentTeams**](TournamentsAPI.md#GetTournamentTeams)       | **Get** /tournaments/{tournament_id}/teams    | Retrieve all teams of a tournament       |
+| [**GetTournamentsList**](TournamentsAPI.md#GetTournamentsList)       | **Get** /tournaments                          | Retrieve tournaments v1 (no longer used) |
 
 
 
@@ -29,7 +29,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -51,18 +51,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**tournamentId** | **string** | The id of the tournament | 
+| Name             | Type                | Description                                                                 | Notes |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**          | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **tournamentId** | **string**          | The id of the tournament                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTournamentRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **expanded** | **[]string** | List of entity names to expand in request | 
 
@@ -101,7 +101,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -122,18 +122,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**tournamentId** | **string** | The id of the tournament | 
+| Name             | Type                | Description                                                                 | Notes |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**          | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **tournamentId** | **string**          | The id of the tournament                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTournamentBracketsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type
@@ -171,7 +171,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -194,18 +194,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**tournamentId** | **string** | The id of the tournament | 
+| Name             | Type                | Description                                                                 | Notes |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**          | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **tournamentId** | **string**          | The id of the tournament                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTournamentMatchesRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -245,7 +245,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -268,18 +268,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**tournamentId** | **string** | The id of the tournament | 
+| Name             | Type                | Description                                                                 | Notes |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**          | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **tournamentId** | **string**          | The id of the tournament                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTournamentTeamsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -319,7 +319,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -349,12 +349,12 @@ func main() {
 Other parameters are passed through a pointer to a apiGetTournamentsListRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **game** | **string** | A game on FACEIT | 
- **region** | **string** | A region of the game | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name       | Type       | Description                   | Notes           |
+| ---------- | ---------- | ----------------------------- | --------------- |
+| **game**   | **string** | A game on FACEIT              |
+| **region** | **string** | A region of the game          |
+| **offset** | **int32**  | The starting item position    | [default to 0]  |
+| **limit**  | **int32**  | The number of items to return | [default to 20] |
 
 ### Return type
 

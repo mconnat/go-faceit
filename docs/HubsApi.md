@@ -2,14 +2,14 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetHub**](HubsAPI.md#GetHub) | **Get** /hubs/{hub_id} | Retrieve hub details
-[**GetHubMatches**](HubsAPI.md#GetHubMatches) | **Get** /hubs/{hub_id}/matches | Retrieve all matches of a hub
-[**GetHubMembers**](HubsAPI.md#GetHubMembers) | **Get** /hubs/{hub_id}/members | Retrieve all members of a hub
-[**GetHubRoles**](HubsAPI.md#GetHubRoles) | **Get** /hubs/{hub_id}/roles | Retrieve all roles members can have in a hub
-[**GetHubRules**](HubsAPI.md#GetHubRules) | **Get** /hubs/{hub_id}/rules | Retrieve rules of a hub
-[**GetHubStats**](HubsAPI.md#GetHubStats) | **Get** /hubs/{hub_id}/stats | Retrieve statistics of a hub
+| Method                                        | HTTP request                   | Description                                  |
+| --------------------------------------------- | ------------------------------ | -------------------------------------------- |
+| [**GetHub**](HubsAPI.md#GetHub)               | **Get** /hubs/{hub_id}         | Retrieve hub details                         |
+| [**GetHubMatches**](HubsAPI.md#GetHubMatches) | **Get** /hubs/{hub_id}/matches | Retrieve all matches of a hub                |
+| [**GetHubMembers**](HubsAPI.md#GetHubMembers) | **Get** /hubs/{hub_id}/members | Retrieve all members of a hub                |
+| [**GetHubRoles**](HubsAPI.md#GetHubRoles)     | **Get** /hubs/{hub_id}/roles   | Retrieve all roles members can have in a hub |
+| [**GetHubRules**](HubsAPI.md#GetHubRules)     | **Get** /hubs/{hub_id}/rules   | Retrieve rules of a hub                      |
+| [**GetHubStats**](HubsAPI.md#GetHubStats)     | **Get** /hubs/{hub_id}/stats   | Retrieve statistics of a hub                 |
 
 
 
@@ -30,7 +30,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -52,18 +52,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **expanded** | **[]string** | List of entity names to expand in request | 
 
@@ -102,7 +102,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -126,18 +126,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubMatchesRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **type_** | **string** | Kind of matches to return. Can be all(default), upcoming, ongoing or past | 
  **offset** | **int32** | The starting item position | [default to 0]
@@ -178,7 +178,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -201,18 +201,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubMembersRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 50]
@@ -252,7 +252,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -275,18 +275,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubRolesRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 50]
@@ -326,7 +326,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -347,18 +347,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubRulesRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type
@@ -396,7 +396,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -419,18 +419,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubStatsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]

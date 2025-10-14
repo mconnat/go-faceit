@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetMatch**](MatchesAPI.md#GetMatch) | **Get** /matches/{match_id} | Retrieve match details
-[**GetMatchStats**](MatchesAPI.md#GetMatchStats) | **Get** /matches/{match_id}/stats | Retrieve statistics of a match
+| Method                                           | HTTP request                      | Description                    |
+| ------------------------------------------------ | --------------------------------- | ------------------------------ |
+| [**GetMatch**](MatchesAPI.md#GetMatch)           | **Get** /matches/{match_id}       | Retrieve match details         |
+| [**GetMatchStats**](MatchesAPI.md#GetMatchStats) | **Get** /matches/{match_id}/stats | Retrieve statistics of a match |
 
 
 
@@ -26,7 +26,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -47,18 +47,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**matchId** | **string** | The id of the match | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **matchId** | **string**          | The id of the match                                                         |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetMatchRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type
@@ -96,7 +96,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -117,18 +117,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**matchId** | **string** | The id of the match | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **matchId** | **string**          | The id of the match                                                         |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetMatchStatsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type

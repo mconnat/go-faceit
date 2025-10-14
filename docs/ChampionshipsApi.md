@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetChampionship**](ChampionshipsAPI.md#GetChampionship) | **Get** /championships/{championship_id} | Retrieve championship details
-[**GetChampionshipMatches**](ChampionshipsAPI.md#GetChampionshipMatches) | **Get** /championships/{championship_id}/matches | Retrieve all matches of a championship
-[**GetChampionshipResults**](ChampionshipsAPI.md#GetChampionshipResults) | **Get** /championships/{championship_id}/results | Retrieve all results of a championship
-[**GetChampionshipSubscriptions**](ChampionshipsAPI.md#GetChampionshipSubscriptions) | **Get** /championships/{championship_id}/subscriptions | Retrieve all subscriptions of a championship
-[**GetChampionships**](ChampionshipsAPI.md#GetChampionships) | **Get** /championships | Retrieve all championships of a game
+| Method                                                                               | HTTP request                                           | Description                                  |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------ | -------------------------------------------- |
+| [**GetChampionship**](ChampionshipsAPI.md#GetChampionship)                           | **Get** /championships/{championship_id}               | Retrieve championship details                |
+| [**GetChampionshipMatches**](ChampionshipsAPI.md#GetChampionshipMatches)             | **Get** /championships/{championship_id}/matches       | Retrieve all matches of a championship       |
+| [**GetChampionshipResults**](ChampionshipsAPI.md#GetChampionshipResults)             | **Get** /championships/{championship_id}/results       | Retrieve all results of a championship       |
+| [**GetChampionshipSubscriptions**](ChampionshipsAPI.md#GetChampionshipSubscriptions) | **Get** /championships/{championship_id}/subscriptions | Retrieve all subscriptions of a championship |
+| [**GetChampionships**](ChampionshipsAPI.md#GetChampionships)                         | **Get** /championships                                 | Retrieve all championships of a game         |
 
 
 
@@ -29,7 +29,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -51,18 +51,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**championshipId** | **string** | The id of the championship | 
+| Name               | Type                | Description                                                                 | Notes |
+| ------------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**            | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **championshipId** | **string**          | The id of the championship                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetChampionshipRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **expanded** | **[]string** | List of entity names to expand in request | 
 
@@ -101,7 +101,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -125,18 +125,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**championshipId** | **string** | The id of the championship | 
+| Name               | Type                | Description                                                                 | Notes |
+| ------------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**            | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **championshipId** | **string**          | The id of the championship                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetChampionshipMatchesRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **type_** | **string** | Kind of matches to return. Can be all(default), upcoming, ongoing or past | 
  **offset** | **int32** | The starting item position | [default to 0]
@@ -177,7 +177,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -200,18 +200,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**championshipId** | **string** | The id of the championship | 
+| Name               | Type                | Description                                                                 | Notes |
+| ------------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**            | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **championshipId** | **string**          | The id of the championship                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetChampionshipResultsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -251,7 +251,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -274,18 +274,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**championshipId** | **string** | The id of the championship | 
+| Name               | Type                | Description                                                                 | Notes |
+| ------------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**            | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **championshipId** | **string**          | The id of the championship                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetChampionshipSubscriptionsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 10]
@@ -325,7 +325,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -355,12 +355,12 @@ func main() {
 Other parameters are passed through a pointer to a apiGetChampionshipsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **game** | **string** | The id of the game | 
- **type_** | **string** | Kind of matches to return. Can be all(default), upcoming, ongoing or past | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 10]
+| Name       | Type       | Description                                                               | Notes           |
+| ---------- | ---------- | ------------------------------------------------------------------------- | --------------- |
+| **game**   | **string** | The id of the game                                                        |
+| **type_**  | **string** | Kind of matches to return. Can be all(default), upcoming, ongoing or past |
+| **offset** | **int32**  | The starting item position                                                | [default to 0]  |
+| **limit**  | **int32**  | The number of items to return                                             | [default to 10] |
 
 ### Return type
 

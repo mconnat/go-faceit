@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetMatchmaking**](MatchmakingsAPI.md#GetMatchmaking) | **Get** /matchmakings/{matchmaking_id} | Retrieve details of a matchmaking of a game on FACEIT
+| Method                                                  | HTTP request                           | Description                                           |
+| ------------------------------------------------------- | -------------------------------------- | ----------------------------------------------------- |
+| [**GetMatchmaking**](MatchmakingsAPI.md#GetMatchmaking) | **Get** /matchmakings/{matchmaking_id} | Retrieve details of a matchmaking of a game on FACEIT |
 
 
 
@@ -25,7 +25,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -46,18 +46,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**matchmakingId** | **string** | The id of the matchmaking | 
+| Name              | Type                | Description                                                                 | Notes |
+| ----------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**           | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **matchmakingId** | **string**          | The id of the matchmaking                                                   |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetMatchmakingRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type

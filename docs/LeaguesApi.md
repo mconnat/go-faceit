@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetLeagueById**](LeaguesAPI.md#GetLeagueById) | **Get** /leagues/{league_id} | Retrieve details of a league of a matchmaking on FACEIT
-[**GetLeagueSeason**](LeaguesAPI.md#GetLeagueSeason) | **Get** /leagues/{league_id}/seasons/{season_id} | Retrieve details of a season of a league on FACEIT
-[**GetPlayerForLeagueSeason**](LeaguesAPI.md#GetPlayerForLeagueSeason) | **Get** /leagues/{league_id}/seasons/{season_id}/players/{player_id} | Retrieve details of a player for a given league and season on FACEIT
+| Method                                                                 | HTTP request                                                         | Description                                                          |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [**GetLeagueById**](LeaguesAPI.md#GetLeagueById)                       | **Get** /leagues/{league_id}                                         | Retrieve details of a league of a matchmaking on FACEIT              |
+| [**GetLeagueSeason**](LeaguesAPI.md#GetLeagueSeason)                   | **Get** /leagues/{league_id}/seasons/{season_id}                     | Retrieve details of a season of a league on FACEIT                   |
+| [**GetPlayerForLeagueSeason**](LeaguesAPI.md#GetPlayerForLeagueSeason) | **Get** /leagues/{league_id}/seasons/{season_id}/players/{player_id} | Retrieve details of a player for a given league and season on FACEIT |
 
 
 
@@ -27,7 +27,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -48,18 +48,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**leagueId** | **string** | The id of the league | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **leagueId** | **string**          | The id of the league                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetLeagueByIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 ### Return type
@@ -97,7 +97,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -119,19 +119,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**leagueId** | **string** | The id of the league | 
-**seasonId** | **int32** | The id of the season | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **leagueId** | **string**          | The id of the league                                                        |
+| **seasonId** | **int32**           | The id of the season                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetLeagueSeasonRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 
@@ -170,7 +170,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -193,20 +193,20 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**leagueId** | **string** | The id of the league | 
-**seasonId** | **int32** | The id of the season | 
-**playerId** | **string** | The id of the player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **leagueId** | **string**          | The id of the league                                                        |
+| **seasonId** | **int32**           | The id of the season                                                        |
+| **playerId** | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerForLeagueSeasonRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 

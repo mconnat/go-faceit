@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetChampionshipGroupRanking**](LeaderboardsAPI.md#GetChampionshipGroupRanking) | **Get** /leaderboards/championships/{championship_id}/groups/{group} | Retrieve group ranking of a championship
-[**GetChampionshipLeaderboards**](LeaderboardsAPI.md#GetChampionshipLeaderboards) | **Get** /leaderboards/championships/{championship_id} | Retrieve all leaderboards of a championship
-[**GetHubLeaderboards**](LeaderboardsAPI.md#GetHubLeaderboards) | **Get** /leaderboards/hubs/{hub_id} | Retrieve all leaderboards of a hub
-[**GetHubRanking**](LeaderboardsAPI.md#GetHubRanking) | **Get** /leaderboards/hubs/{hub_id}/general | Retrieve all time ranking of a hub
-[**GetHubSeasonRanking**](LeaderboardsAPI.md#GetHubSeasonRanking) | **Get** /leaderboards/hubs/{hub_id}/seasons/{season} | Retrieve seasonal ranking of a hub
-[**GetLeaderboard**](LeaderboardsAPI.md#GetLeaderboard) | **Get** /leaderboards/{leaderboard_id} | Retrieve ranking from a leaderboard id
-[**GetPlayerRankingInLeaderboard**](LeaderboardsAPI.md#GetPlayerRankingInLeaderboard) | **Get** /leaderboards/{leaderboard_id}/players/{player_id} | Retrieve a players ranking in a leaderboard
+| Method                                                                                | HTTP request                                                         | Description                                 |
+| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------- |
+| [**GetChampionshipGroupRanking**](LeaderboardsAPI.md#GetChampionshipGroupRanking)     | **Get** /leaderboards/championships/{championship_id}/groups/{group} | Retrieve group ranking of a championship    |
+| [**GetChampionshipLeaderboards**](LeaderboardsAPI.md#GetChampionshipLeaderboards)     | **Get** /leaderboards/championships/{championship_id}                | Retrieve all leaderboards of a championship |
+| [**GetHubLeaderboards**](LeaderboardsAPI.md#GetHubLeaderboards)                       | **Get** /leaderboards/hubs/{hub_id}                                  | Retrieve all leaderboards of a hub          |
+| [**GetHubRanking**](LeaderboardsAPI.md#GetHubRanking)                                 | **Get** /leaderboards/hubs/{hub_id}/general                          | Retrieve all time ranking of a hub          |
+| [**GetHubSeasonRanking**](LeaderboardsAPI.md#GetHubSeasonRanking)                     | **Get** /leaderboards/hubs/{hub_id}/seasons/{season}                 | Retrieve seasonal ranking of a hub          |
+| [**GetLeaderboard**](LeaderboardsAPI.md#GetLeaderboard)                               | **Get** /leaderboards/{leaderboard_id}                               | Retrieve ranking from a leaderboard id      |
+| [**GetPlayerRankingInLeaderboard**](LeaderboardsAPI.md#GetPlayerRankingInLeaderboard) | **Get** /leaderboards/{leaderboard_id}/players/{player_id}           | Retrieve a players ranking in a leaderboard |
 
 
 
@@ -31,7 +31,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -55,19 +55,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**championshipId** | **string** | The id of the championship | 
-**group** | **int32** | A group of the championship | 
+| Name               | Type                | Description                                                                 | Notes |
+| ------------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**            | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **championshipId** | **string**          | The id of the championship                                                  |
+| **group**          | **int32**           | A group of the championship                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetChampionshipGroupRankingRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
  **offset** | **int32** | The starting item position | [default to 0]
@@ -108,7 +108,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -131,18 +131,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**championshipId** | **string** | The id of the championship | 
+| Name               | Type                | Description                                                                 | Notes |
+| ------------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**            | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **championshipId** | **string**          | The id of the championship                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetChampionshipLeaderboardsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -182,7 +182,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -205,18 +205,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubLeaderboardsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -256,7 +256,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -279,18 +279,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId** | **string**          | The id of the hub                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubRankingRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -330,7 +330,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -354,19 +354,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**hubId** | **string** | The id of the hub | 
-**season** | **int32** | A season of the hub | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **hubId**  | **string**          | The id of the hub                                                           |
+| **season** | **int32**           | A season of the hub                                                         |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetHubSeasonRankingRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
  **offset** | **int32** | The starting item position | [default to 0]
@@ -407,7 +407,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -430,18 +430,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**leaderboardId** | **string** | The id of the leaderboard | 
+| Name              | Type                | Description                                                                 | Notes |
+| ----------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**           | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **leaderboardId** | **string**          | The id of the leaderboard                                                   |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetLeaderboardRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
  **offset** | **int32** | The starting item position | [default to 0]
  **limit** | **int32** | The number of items to return | [default to 20]
@@ -481,7 +481,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -503,19 +503,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**leaderboardId** | **string** | The id of the leaderboard | 
-**playerId** | **string** | The id of the player | 
+| Name              | Type                | Description                                                                 | Notes |
+| ----------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**           | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **leaderboardId** | **string**          | The id of the leaderboard                                                   |
+| **playerId**      | **string**          | The id of the player                                                        |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerRankingInLeaderboardRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 

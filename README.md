@@ -22,7 +22,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import faceit "github.com/GIT_USER_ID/GIT_REPO_ID"
+import faceit "github.com/mconnat/go-faceit"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
@@ -76,72 +76,72 @@ ctx = context.WithValue(context.Background(), faceit.ContextOperationServerVaria
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*ChampionshipsAPI* | [**GetChampionship**](docs/ChampionshipsAPI.md#getchampionship) | **Get** /championships/{championship_id} | Retrieve championship details
-*ChampionshipsAPI* | [**GetChampionshipMatches**](docs/ChampionshipsAPI.md#getchampionshipmatches) | **Get** /championships/{championship_id}/matches | Retrieve all matches of a championship
-*ChampionshipsAPI* | [**GetChampionshipResults**](docs/ChampionshipsAPI.md#getchampionshipresults) | **Get** /championships/{championship_id}/results | Retrieve all results of a championship
-*ChampionshipsAPI* | [**GetChampionshipSubscriptions**](docs/ChampionshipsAPI.md#getchampionshipsubscriptions) | **Get** /championships/{championship_id}/subscriptions | Retrieve all subscriptions of a championship
-*ChampionshipsAPI* | [**GetChampionships**](docs/ChampionshipsAPI.md#getchampionships) | **Get** /championships | Retrieve all championships of a game
-*GamesAPI* | [**GetAllGames**](docs/GamesAPI.md#getallgames) | **Get** /games | Retrieve details of all games on FACEIT
-*GamesAPI* | [**GetGame**](docs/GamesAPI.md#getgame) | **Get** /games/{game_id} | Retrieve game details
-*GamesAPI* | [**GetGameMatchmakings**](docs/GamesAPI.md#getgamematchmakings) | **Get** /games/{gameId}/matchmakings | Retrieve details of all matchmakings of a game on FACEIT
-*GamesAPI* | [**GetParentGame**](docs/GamesAPI.md#getparentgame) | **Get** /games/{game_id}/parent | Retrieve the details of the parent game, if the game is region-specific
-*GamesAPI* | [**GetQueueBans**](docs/GamesAPI.md#getqueuebans) | **Get** /games/{game_id}/queues/{queue_id}/bans | Retrieve queue bans on FACEIT
-*GamesAPI* | [**GetQueueById**](docs/GamesAPI.md#getqueuebyid) | **Get** /games/{game_id}/queues/{queue_id} | Retrieve details of a queue on FACEIT
-*GamesAPI* | [**GetQueuesByEntityFilters**](docs/GamesAPI.md#getqueuesbyentityfilters) | **Get** /games/{game_id}/queues | Retrieve queues by filters on FACEIT
-*GamesAPI* | [**GetQueuesByRegion**](docs/GamesAPI.md#getqueuesbyregion) | **Get** /games/{game_id}/regions/{region_id}/queues | Retrieve queues by region on FACEIT
-*HubsAPI* | [**GetHub**](docs/HubsAPI.md#gethub) | **Get** /hubs/{hub_id} | Retrieve hub details
-*HubsAPI* | [**GetHubMatches**](docs/HubsAPI.md#gethubmatches) | **Get** /hubs/{hub_id}/matches | Retrieve all matches of a hub
-*HubsAPI* | [**GetHubMembers**](docs/HubsAPI.md#gethubmembers) | **Get** /hubs/{hub_id}/members | Retrieve all members of a hub
-*HubsAPI* | [**GetHubRoles**](docs/HubsAPI.md#gethubroles) | **Get** /hubs/{hub_id}/roles | Retrieve all roles members can have in a hub
-*HubsAPI* | [**GetHubRules**](docs/HubsAPI.md#gethubrules) | **Get** /hubs/{hub_id}/rules | Retrieve rules of a hub
-*HubsAPI* | [**GetHubStats**](docs/HubsAPI.md#gethubstats) | **Get** /hubs/{hub_id}/stats | Retrieve statistics of a hub
-*LeaderboardsAPI* | [**GetChampionshipGroupRanking**](docs/LeaderboardsAPI.md#getchampionshipgroupranking) | **Get** /leaderboards/championships/{championship_id}/groups/{group} | Retrieve group ranking of a championship
-*LeaderboardsAPI* | [**GetChampionshipLeaderboards**](docs/LeaderboardsAPI.md#getchampionshipleaderboards) | **Get** /leaderboards/championships/{championship_id} | Retrieve all leaderboards of a championship
-*LeaderboardsAPI* | [**GetHubLeaderboards**](docs/LeaderboardsAPI.md#gethubleaderboards) | **Get** /leaderboards/hubs/{hub_id} | Retrieve all leaderboards of a hub
-*LeaderboardsAPI* | [**GetHubRanking**](docs/LeaderboardsAPI.md#gethubranking) | **Get** /leaderboards/hubs/{hub_id}/general | Retrieve all time ranking of a hub
-*LeaderboardsAPI* | [**GetHubSeasonRanking**](docs/LeaderboardsAPI.md#gethubseasonranking) | **Get** /leaderboards/hubs/{hub_id}/seasons/{season} | Retrieve seasonal ranking of a hub
-*LeaderboardsAPI* | [**GetLeaderboard**](docs/LeaderboardsAPI.md#getleaderboard) | **Get** /leaderboards/{leaderboard_id} | Retrieve ranking from a leaderboard id
-*LeaderboardsAPI* | [**GetPlayerRankingInLeaderboard**](docs/LeaderboardsAPI.md#getplayerrankinginleaderboard) | **Get** /leaderboards/{leaderboard_id}/players/{player_id} | Retrieve a players ranking in a leaderboard
-*LeaguesAPI* | [**GetLeagueById**](docs/LeaguesAPI.md#getleaguebyid) | **Get** /leagues/{league_id} | Retrieve details of a league of a matchmaking on FACEIT
-*LeaguesAPI* | [**GetLeagueSeason**](docs/LeaguesAPI.md#getleagueseason) | **Get** /leagues/{league_id}/seasons/{season_id} | Retrieve details of a season of a league on FACEIT
-*LeaguesAPI* | [**GetPlayerForLeagueSeason**](docs/LeaguesAPI.md#getplayerforleagueseason) | **Get** /leagues/{league_id}/seasons/{season_id}/players/{player_id} | Retrieve details of a player for a given league and season on FACEIT
-*MatchesAPI* | [**GetMatch**](docs/MatchesAPI.md#getmatch) | **Get** /matches/{match_id} | Retrieve match details
-*MatchesAPI* | [**GetMatchStats**](docs/MatchesAPI.md#getmatchstats) | **Get** /matches/{match_id}/stats | Retrieve statistics of a match
-*MatchmakingsAPI* | [**GetMatchmaking**](docs/MatchmakingsAPI.md#getmatchmaking) | **Get** /matchmakings/{matchmaking_id} | Retrieve details of a matchmaking of a game on FACEIT
-*OrganizersAPI* | [**GetOrganizer**](docs/OrganizersAPI.md#getorganizer) | **Get** /organizers/{organizer_id} | Retrieve organizer details
-*OrganizersAPI* | [**GetOrganizerByName**](docs/OrganizersAPI.md#getorganizerbyname) | **Get** /organizers | Retrieve organizer details from name
-*OrganizersAPI* | [**GetOrganizerChampionships**](docs/OrganizersAPI.md#getorganizerchampionships) | **Get** /organizers/{organizer_id}/championships | Retrieve all championships of an organizer
-*OrganizersAPI* | [**GetOrganizerGames**](docs/OrganizersAPI.md#getorganizergames) | **Get** /organizers/{organizer_id}/games | Retrieve all games an organizer is involved with
-*OrganizersAPI* | [**GetOrganizerHubs**](docs/OrganizersAPI.md#getorganizerhubs) | **Get** /organizers/{organizer_id}/hubs | Retrieve all hubs of an organizer
-*OrganizersAPI* | [**GetOrganizerTournaments**](docs/OrganizersAPI.md#getorganizertournaments) | **Get** /organizers/{organizer_id}/tournaments | Retrieve all tournaments of an organizer
-*PlayersAPI* | [**GetPlayer**](docs/PlayersAPI.md#getplayer) | **Get** /players/{player_id} | Retrieve player details
-*PlayersAPI* | [**GetPlayerBans**](docs/PlayersAPI.md#getplayerbans) | **Get** /players/{player_id}/bans | Retrieve all bans of a player
-*PlayersAPI* | [**GetPlayerFromLookup**](docs/PlayersAPI.md#getplayerfromlookup) | **Get** /players | Retrieve player details
-*PlayersAPI* | [**GetPlayerHistory**](docs/PlayersAPI.md#getplayerhistory) | **Get** /players/{player_id}/history | Retrieve all matches of a player
-*PlayersAPI* | [**GetPlayerHubs**](docs/PlayersAPI.md#getplayerhubs) | **Get** /players/{player_id}/hubs | Retrieve all hubs of a player
-*PlayersAPI* | [**GetPlayerStats**](docs/PlayersAPI.md#getplayerstats) | **Get** /players/{player_id}/games/{game_id}/stats | Retrieve statistics of a player for a given amount of matches
-*PlayersAPI* | [**GetPlayerStats_0**](docs/PlayersAPI.md#getplayerstats_0) | **Get** /players/{player_id}/stats/{game_id} | Retrieve statistics of a player
-*PlayersAPI* | [**GetPlayerTeams**](docs/PlayersAPI.md#getplayerteams) | **Get** /players/{player_id}/teams | Retrieve all teams of a player
-*PlayersAPI* | [**GetPlayerTournaments**](docs/PlayersAPI.md#getplayertournaments) | **Get** /players/{player_id}/tournaments | Retrieve all tournaments of a player
-*RankingsAPI* | [**GetGlobalRanking**](docs/RankingsAPI.md#getglobalranking) | **Get** /rankings/games/{game_id}/regions/{region} | Retrieve global ranking of a game
-*RankingsAPI* | [**GetPlayerRanking**](docs/RankingsAPI.md#getplayerranking) | **Get** /rankings/games/{game_id}/regions/{region}/players/{player_id} | Retrieve user position in the global ranking of a game
-*SearchAPI* | [**SearchChampionships**](docs/SearchAPI.md#searchchampionships) | **Get** /search/championships | Search for championships
-*SearchAPI* | [**SearchClans**](docs/SearchAPI.md#searchclans) | **Get** /search/clans | Search for clans
-*SearchAPI* | [**SearchHubs**](docs/SearchAPI.md#searchhubs) | **Get** /search/hubs | Search for hubs
-*SearchAPI* | [**SearchOrganizers**](docs/SearchAPI.md#searchorganizers) | **Get** /search/organizers | Search for organizers
-*SearchAPI* | [**SearchPlayers**](docs/SearchAPI.md#searchplayers) | **Get** /search/players | Search for players
-*SearchAPI* | [**SearchTeams**](docs/SearchAPI.md#searchteams) | **Get** /search/teams | Search for teams
-*SearchAPI* | [**SearchTournaments**](docs/SearchAPI.md#searchtournaments) | **Get** /search/tournaments | Search for tournaments
-*TeamsAPI* | [**GetTeam**](docs/TeamsAPI.md#getteam) | **Get** /teams/{team_id} | Retrieve team details
-*TeamsAPI* | [**GetTeamStats**](docs/TeamsAPI.md#getteamstats) | **Get** /teams/{team_id}/stats/{game_id} | Retrieve statistics of a team
-*TeamsAPI* | [**GetTeamTournaments**](docs/TeamsAPI.md#getteamtournaments) | **Get** /teams/{team_id}/tournaments | Retrieve tournaments of a team
-*TournamentsAPI* | [**GetTournament**](docs/TournamentsAPI.md#gettournament) | **Get** /tournaments/{tournament_id} | Retrieve tournament details
-*TournamentsAPI* | [**GetTournamentBrackets**](docs/TournamentsAPI.md#gettournamentbrackets) | **Get** /tournaments/{tournament_id}/brackets | Retrieve brackets of a tournament
-*TournamentsAPI* | [**GetTournamentMatches**](docs/TournamentsAPI.md#gettournamentmatches) | **Get** /tournaments/{tournament_id}/matches | Retrieve all matches of a tournament
-*TournamentsAPI* | [**GetTournamentTeams**](docs/TournamentsAPI.md#gettournamentteams) | **Get** /tournaments/{tournament_id}/teams | Retrieve all teams of a tournament
-*TournamentsAPI* | [**GetTournamentsList**](docs/TournamentsAPI.md#gettournamentslist) | **Get** /tournaments | Retrieve tournaments v1 (no longer used)
+| Class              | Method                                                                                     | HTTP request                                                           | Description                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| *ChampionshipsAPI* | [**GetChampionship**](docs/ChampionshipsAPI.md#getchampionship)                            | **Get** /championships/{championship_id}                               | Retrieve championship details                                           |
+| *ChampionshipsAPI* | [**GetChampionshipMatches**](docs/ChampionshipsAPI.md#getchampionshipmatches)              | **Get** /championships/{championship_id}/matches                       | Retrieve all matches of a championship                                  |
+| *ChampionshipsAPI* | [**GetChampionshipResults**](docs/ChampionshipsAPI.md#getchampionshipresults)              | **Get** /championships/{championship_id}/results                       | Retrieve all results of a championship                                  |
+| *ChampionshipsAPI* | [**GetChampionshipSubscriptions**](docs/ChampionshipsAPI.md#getchampionshipsubscriptions)  | **Get** /championships/{championship_id}/subscriptions                 | Retrieve all subscriptions of a championship                            |
+| *ChampionshipsAPI* | [**GetChampionships**](docs/ChampionshipsAPI.md#getchampionships)                          | **Get** /championships                                                 | Retrieve all championships of a game                                    |
+| *GamesAPI*         | [**GetAllGames**](docs/GamesAPI.md#getallgames)                                            | **Get** /games                                                         | Retrieve details of all games on FACEIT                                 |
+| *GamesAPI*         | [**GetGame**](docs/GamesAPI.md#getgame)                                                    | **Get** /games/{game_id}                                               | Retrieve game details                                                   |
+| *GamesAPI*         | [**GetGameMatchmakings**](docs/GamesAPI.md#getgamematchmakings)                            | **Get** /games/{gameId}/matchmakings                                   | Retrieve details of all matchmakings of a game on FACEIT                |
+| *GamesAPI*         | [**GetParentGame**](docs/GamesAPI.md#getparentgame)                                        | **Get** /games/{game_id}/parent                                        | Retrieve the details of the parent game, if the game is region-specific |
+| *GamesAPI*         | [**GetQueueBans**](docs/GamesAPI.md#getqueuebans)                                          | **Get** /games/{game_id}/queues/{queue_id}/bans                        | Retrieve queue bans on FACEIT                                           |
+| *GamesAPI*         | [**GetQueueById**](docs/GamesAPI.md#getqueuebyid)                                          | **Get** /games/{game_id}/queues/{queue_id}                             | Retrieve details of a queue on FACEIT                                   |
+| *GamesAPI*         | [**GetQueuesByEntityFilters**](docs/GamesAPI.md#getqueuesbyentityfilters)                  | **Get** /games/{game_id}/queues                                        | Retrieve queues by filters on FACEIT                                    |
+| *GamesAPI*         | [**GetQueuesByRegion**](docs/GamesAPI.md#getqueuesbyregion)                                | **Get** /games/{game_id}/regions/{region_id}/queues                    | Retrieve queues by region on FACEIT                                     |
+| *HubsAPI*          | [**GetHub**](docs/HubsAPI.md#gethub)                                                       | **Get** /hubs/{hub_id}                                                 | Retrieve hub details                                                    |
+| *HubsAPI*          | [**GetHubMatches**](docs/HubsAPI.md#gethubmatches)                                         | **Get** /hubs/{hub_id}/matches                                         | Retrieve all matches of a hub                                           |
+| *HubsAPI*          | [**GetHubMembers**](docs/HubsAPI.md#gethubmembers)                                         | **Get** /hubs/{hub_id}/members                                         | Retrieve all members of a hub                                           |
+| *HubsAPI*          | [**GetHubRoles**](docs/HubsAPI.md#gethubroles)                                             | **Get** /hubs/{hub_id}/roles                                           | Retrieve all roles members can have in a hub                            |
+| *HubsAPI*          | [**GetHubRules**](docs/HubsAPI.md#gethubrules)                                             | **Get** /hubs/{hub_id}/rules                                           | Retrieve rules of a hub                                                 |
+| *HubsAPI*          | [**GetHubStats**](docs/HubsAPI.md#gethubstats)                                             | **Get** /hubs/{hub_id}/stats                                           | Retrieve statistics of a hub                                            |
+| *LeaderboardsAPI*  | [**GetChampionshipGroupRanking**](docs/LeaderboardsAPI.md#getchampionshipgroupranking)     | **Get** /leaderboards/championships/{championship_id}/groups/{group}   | Retrieve group ranking of a championship                                |
+| *LeaderboardsAPI*  | [**GetChampionshipLeaderboards**](docs/LeaderboardsAPI.md#getchampionshipleaderboards)     | **Get** /leaderboards/championships/{championship_id}                  | Retrieve all leaderboards of a championship                             |
+| *LeaderboardsAPI*  | [**GetHubLeaderboards**](docs/LeaderboardsAPI.md#gethubleaderboards)                       | **Get** /leaderboards/hubs/{hub_id}                                    | Retrieve all leaderboards of a hub                                      |
+| *LeaderboardsAPI*  | [**GetHubRanking**](docs/LeaderboardsAPI.md#gethubranking)                                 | **Get** /leaderboards/hubs/{hub_id}/general                            | Retrieve all time ranking of a hub                                      |
+| *LeaderboardsAPI*  | [**GetHubSeasonRanking**](docs/LeaderboardsAPI.md#gethubseasonranking)                     | **Get** /leaderboards/hubs/{hub_id}/seasons/{season}                   | Retrieve seasonal ranking of a hub                                      |
+| *LeaderboardsAPI*  | [**GetLeaderboard**](docs/LeaderboardsAPI.md#getleaderboard)                               | **Get** /leaderboards/{leaderboard_id}                                 | Retrieve ranking from a leaderboard id                                  |
+| *LeaderboardsAPI*  | [**GetPlayerRankingInLeaderboard**](docs/LeaderboardsAPI.md#getplayerrankinginleaderboard) | **Get** /leaderboards/{leaderboard_id}/players/{player_id}             | Retrieve a players ranking in a leaderboard                             |
+| *LeaguesAPI*       | [**GetLeagueById**](docs/LeaguesAPI.md#getleaguebyid)                                      | **Get** /leagues/{league_id}                                           | Retrieve details of a league of a matchmaking on FACEIT                 |
+| *LeaguesAPI*       | [**GetLeagueSeason**](docs/LeaguesAPI.md#getleagueseason)                                  | **Get** /leagues/{league_id}/seasons/{season_id}                       | Retrieve details of a season of a league on FACEIT                      |
+| *LeaguesAPI*       | [**GetPlayerForLeagueSeason**](docs/LeaguesAPI.md#getplayerforleagueseason)                | **Get** /leagues/{league_id}/seasons/{season_id}/players/{player_id}   | Retrieve details of a player for a given league and season on FACEIT    |
+| *MatchesAPI*       | [**GetMatch**](docs/MatchesAPI.md#getmatch)                                                | **Get** /matches/{match_id}                                            | Retrieve match details                                                  |
+| *MatchesAPI*       | [**GetMatchStats**](docs/MatchesAPI.md#getmatchstats)                                      | **Get** /matches/{match_id}/stats                                      | Retrieve statistics of a match                                          |
+| *MatchmakingsAPI*  | [**GetMatchmaking**](docs/MatchmakingsAPI.md#getmatchmaking)                               | **Get** /matchmakings/{matchmaking_id}                                 | Retrieve details of a matchmaking of a game on FACEIT                   |
+| *OrganizersAPI*    | [**GetOrganizer**](docs/OrganizersAPI.md#getorganizer)                                     | **Get** /organizers/{organizer_id}                                     | Retrieve organizer details                                              |
+| *OrganizersAPI*    | [**GetOrganizerByName**](docs/OrganizersAPI.md#getorganizerbyname)                         | **Get** /organizers                                                    | Retrieve organizer details from name                                    |
+| *OrganizersAPI*    | [**GetOrganizerChampionships**](docs/OrganizersAPI.md#getorganizerchampionships)           | **Get** /organizers/{organizer_id}/championships                       | Retrieve all championships of an organizer                              |
+| *OrganizersAPI*    | [**GetOrganizerGames**](docs/OrganizersAPI.md#getorganizergames)                           | **Get** /organizers/{organizer_id}/games                               | Retrieve all games an organizer is involved with                        |
+| *OrganizersAPI*    | [**GetOrganizerHubs**](docs/OrganizersAPI.md#getorganizerhubs)                             | **Get** /organizers/{organizer_id}/hubs                                | Retrieve all hubs of an organizer                                       |
+| *OrganizersAPI*    | [**GetOrganizerTournaments**](docs/OrganizersAPI.md#getorganizertournaments)               | **Get** /organizers/{organizer_id}/tournaments                         | Retrieve all tournaments of an organizer                                |
+| *PlayersAPI*       | [**GetPlayer**](docs/PlayersAPI.md#getplayer)                                              | **Get** /players/{player_id}                                           | Retrieve player details                                                 |
+| *PlayersAPI*       | [**GetPlayerBans**](docs/PlayersAPI.md#getplayerbans)                                      | **Get** /players/{player_id}/bans                                      | Retrieve all bans of a player                                           |
+| *PlayersAPI*       | [**GetPlayerFromLookup**](docs/PlayersAPI.md#getplayerfromlookup)                          | **Get** /players                                                       | Retrieve player details                                                 |
+| *PlayersAPI*       | [**GetPlayerHistory**](docs/PlayersAPI.md#getplayerhistory)                                | **Get** /players/{player_id}/history                                   | Retrieve all matches of a player                                        |
+| *PlayersAPI*       | [**GetPlayerHubs**](docs/PlayersAPI.md#getplayerhubs)                                      | **Get** /players/{player_id}/hubs                                      | Retrieve all hubs of a player                                           |
+| *PlayersAPI*       | [**GetPlayerStats**](docs/PlayersAPI.md#getplayerstats)                                    | **Get** /players/{player_id}/games/{game_id}/stats                     | Retrieve statistics of a player for a given amount of matches           |
+| *PlayersAPI*       | [**GetPlayerStats_0**](docs/PlayersAPI.md#getplayerstats_0)                                | **Get** /players/{player_id}/stats/{game_id}                           | Retrieve statistics of a player                                         |
+| *PlayersAPI*       | [**GetPlayerTeams**](docs/PlayersAPI.md#getplayerteams)                                    | **Get** /players/{player_id}/teams                                     | Retrieve all teams of a player                                          |
+| *PlayersAPI*       | [**GetPlayerTournaments**](docs/PlayersAPI.md#getplayertournaments)                        | **Get** /players/{player_id}/tournaments                               | Retrieve all tournaments of a player                                    |
+| *RankingsAPI*      | [**GetGlobalRanking**](docs/RankingsAPI.md#getglobalranking)                               | **Get** /rankings/games/{game_id}/regions/{region}                     | Retrieve global ranking of a game                                       |
+| *RankingsAPI*      | [**GetPlayerRanking**](docs/RankingsAPI.md#getplayerranking)                               | **Get** /rankings/games/{game_id}/regions/{region}/players/{player_id} | Retrieve user position in the global ranking of a game                  |
+| *SearchAPI*        | [**SearchChampionships**](docs/SearchAPI.md#searchchampionships)                           | **Get** /search/championships                                          | Search for championships                                                |
+| *SearchAPI*        | [**SearchClans**](docs/SearchAPI.md#searchclans)                                           | **Get** /search/clans                                                  | Search for clans                                                        |
+| *SearchAPI*        | [**SearchHubs**](docs/SearchAPI.md#searchhubs)                                             | **Get** /search/hubs                                                   | Search for hubs                                                         |
+| *SearchAPI*        | [**SearchOrganizers**](docs/SearchAPI.md#searchorganizers)                                 | **Get** /search/organizers                                             | Search for organizers                                                   |
+| *SearchAPI*        | [**SearchPlayers**](docs/SearchAPI.md#searchplayers)                                       | **Get** /search/players                                                | Search for players                                                      |
+| *SearchAPI*        | [**SearchTeams**](docs/SearchAPI.md#searchteams)                                           | **Get** /search/teams                                                  | Search for teams                                                        |
+| *SearchAPI*        | [**SearchTournaments**](docs/SearchAPI.md#searchtournaments)                               | **Get** /search/tournaments                                            | Search for tournaments                                                  |
+| *TeamsAPI*         | [**GetTeam**](docs/TeamsAPI.md#getteam)                                                    | **Get** /teams/{team_id}                                               | Retrieve team details                                                   |
+| *TeamsAPI*         | [**GetTeamStats**](docs/TeamsAPI.md#getteamstats)                                          | **Get** /teams/{team_id}/stats/{game_id}                               | Retrieve statistics of a team                                           |
+| *TeamsAPI*         | [**GetTeamTournaments**](docs/TeamsAPI.md#getteamtournaments)                              | **Get** /teams/{team_id}/tournaments                                   | Retrieve tournaments of a team                                          |
+| *TournamentsAPI*   | [**GetTournament**](docs/TournamentsAPI.md#gettournament)                                  | **Get** /tournaments/{tournament_id}                                   | Retrieve tournament details                                             |
+| *TournamentsAPI*   | [**GetTournamentBrackets**](docs/TournamentsAPI.md#gettournamentbrackets)                  | **Get** /tournaments/{tournament_id}/brackets                          | Retrieve brackets of a tournament                                       |
+| *TournamentsAPI*   | [**GetTournamentMatches**](docs/TournamentsAPI.md#gettournamentmatches)                    | **Get** /tournaments/{tournament_id}/matches                           | Retrieve all matches of a tournament                                    |
+| *TournamentsAPI*   | [**GetTournamentTeams**](docs/TournamentsAPI.md#gettournamentteams)                        | **Get** /tournaments/{tournament_id}/teams                             | Retrieve all teams of a tournament                                      |
+| *TournamentsAPI*   | [**GetTournamentsList**](docs/TournamentsAPI.md#gettournamentslist)                        | **Get** /tournaments                                                   | Retrieve tournaments v1 (no longer used)                                |
 
 
 ## Documentation For Models

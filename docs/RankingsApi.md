@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetGlobalRanking**](RankingsAPI.md#GetGlobalRanking) | **Get** /rankings/games/{game_id}/regions/{region} | Retrieve global ranking of a game
-[**GetPlayerRanking**](RankingsAPI.md#GetPlayerRanking) | **Get** /rankings/games/{game_id}/regions/{region}/players/{player_id} | Retrieve user position in the global ranking of a game
+| Method                                                  | HTTP request                                                           | Description                                            |
+| ------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------ |
+| [**GetGlobalRanking**](RankingsAPI.md#GetGlobalRanking) | **Get** /rankings/games/{game_id}/regions/{region}                     | Retrieve global ranking of a game                      |
+| [**GetPlayerRanking**](RankingsAPI.md#GetPlayerRanking) | **Get** /rankings/games/{game_id}/regions/{region}/players/{player_id} | Retrieve user position in the global ranking of a game |
 
 
 
@@ -26,7 +26,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -51,19 +51,19 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**gameId** | **string** | The id of the game | 
-**region** | **string** | A region of a game | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **gameId** | **string**          | The id of the game                                                          |
+| **region** | **string**          | A region of a game                                                          |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetGlobalRankingRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
  **country** | **string** | A country code (ISO 3166-1) | 
@@ -105,7 +105,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -130,20 +130,20 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**gameId** | **string** | The id of the game | 
-**region** | **string** | A region of a game | 
-**playerId** | **string** | The id of a player | 
+| Name         | Type                | Description                                                                 | Notes |
+| ------------ | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**      | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **gameId**   | **string**          | The id of the game                                                          |
+| **region**   | **string**          | A region of a game                                                          |
+| **playerId** | **string**          | The id of a player                                                          |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetPlayerRankingRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 
 

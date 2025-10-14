@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://open.faceit.com/data/v4*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**SearchChampionships**](SearchAPI.md#SearchChampionships) | **Get** /search/championships | Search for championships
-[**SearchClans**](SearchAPI.md#SearchClans) | **Get** /search/clans | Search for clans
-[**SearchHubs**](SearchAPI.md#SearchHubs) | **Get** /search/hubs | Search for hubs
-[**SearchOrganizers**](SearchAPI.md#SearchOrganizers) | **Get** /search/organizers | Search for organizers
-[**SearchPlayers**](SearchAPI.md#SearchPlayers) | **Get** /search/players | Search for players
-[**SearchTeams**](SearchAPI.md#SearchTeams) | **Get** /search/teams | Search for teams
-[**SearchTournaments**](SearchAPI.md#SearchTournaments) | **Get** /search/tournaments | Search for tournaments
+| Method                                                      | HTTP request                  | Description              |
+| ----------------------------------------------------------- | ----------------------------- | ------------------------ |
+| [**SearchChampionships**](SearchAPI.md#SearchChampionships) | **Get** /search/championships | Search for championships |
+| [**SearchClans**](SearchAPI.md#SearchClans)                 | **Get** /search/clans         | Search for clans         |
+| [**SearchHubs**](SearchAPI.md#SearchHubs)                   | **Get** /search/hubs          | Search for hubs          |
+| [**SearchOrganizers**](SearchAPI.md#SearchOrganizers)       | **Get** /search/organizers    | Search for organizers    |
+| [**SearchPlayers**](SearchAPI.md#SearchPlayers)             | **Get** /search/players       | Search for players       |
+| [**SearchTeams**](SearchAPI.md#SearchTeams)                 | **Get** /search/teams         | Search for teams         |
+| [**SearchTournaments**](SearchAPI.md#SearchTournaments)     | **Get** /search/tournaments   | Search for tournaments   |
 
 
 
@@ -31,7 +31,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -63,14 +63,14 @@ func main() {
 Other parameters are passed through a pointer to a apiSearchChampionshipsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string** | The name of a championship on FACEIT | 
- **game** | **string** | A game on FACEIT | 
- **region** | **string** | A region of the game | 
- **type_** | **string** | Kind of competitions to return | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name       | Type       | Description                          | Notes           |
+| ---------- | ---------- | ------------------------------------ | --------------- |
+| **name**   | **string** | The name of a championship on FACEIT |
+| **game**   | **string** | A game on FACEIT                     |
+| **region** | **string** | A region of the game                 |
+| **type_**  | **string** | Kind of competitions to return       |
+| **offset** | **int32**  | The starting item position           | [default to 0]  |
+| **limit**  | **int32**  | The number of items to return        | [default to 20] |
 
 ### Return type
 
@@ -107,7 +107,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -138,13 +138,13 @@ func main() {
 Other parameters are passed through a pointer to a apiSearchClansRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string** | The name of a clan on FACEIT | 
- **game** | **string** | A game on FACEIT | 
- **region** | **string** | A region of the game | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name       | Type       | Description                   | Notes           |
+| ---------- | ---------- | ----------------------------- | --------------- |
+| **name**   | **string** | The name of a clan on FACEIT  |
+| **game**   | **string** | A game on FACEIT              |
+| **region** | **string** | A region of the game          |
+| **offset** | **int32**  | The starting item position    | [default to 0]  |
+| **limit**  | **int32**  | The number of items to return | [default to 20] |
 
 ### Return type
 
@@ -181,7 +181,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -212,13 +212,13 @@ func main() {
 Other parameters are passed through a pointer to a apiSearchHubsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string** | The name of a hub on FACEIT | 
- **game** | **string** | A game on FACEIT | 
- **region** | **string** | A region of the game | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name       | Type       | Description                   | Notes           |
+| ---------- | ---------- | ----------------------------- | --------------- |
+| **name**   | **string** | The name of a hub on FACEIT   |
+| **game**   | **string** | A game on FACEIT              |
+| **region** | **string** | A region of the game          |
+| **offset** | **int32**  | The starting item position    | [default to 0]  |
+| **limit**  | **int32**  | The number of items to return | [default to 20] |
 
 ### Return type
 
@@ -255,7 +255,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -284,11 +284,11 @@ func main() {
 Other parameters are passed through a pointer to a apiSearchOrganizersRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string** | The name of a organizer on FACEIT | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name       | Type       | Description                       | Notes           |
+| ---------- | ---------- | --------------------------------- | --------------- |
+| **name**   | **string** | The name of a organizer on FACEIT |
+| **offset** | **int32**  | The starting item position        | [default to 0]  |
+| **limit**  | **int32**  | The number of items to return     | [default to 20] |
 
 ### Return type
 
@@ -325,7 +325,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -356,13 +356,13 @@ func main() {
 Other parameters are passed through a pointer to a apiSearchPlayersRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **nickname** | **string** | The nickname of a player on FACEIT | 
- **game** | **string** | A game on FACEIT | 
- **country** | **string** | A country code (ISO 3166-1) | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name         | Type       | Description                        | Notes           |
+| ------------ | ---------- | ---------------------------------- | --------------- |
+| **nickname** | **string** | The nickname of a player on FACEIT |
+| **game**     | **string** | A game on FACEIT                   |
+| **country**  | **string** | A country code (ISO 3166-1)        |
+| **offset**   | **int32**  | The starting item position         | [default to 0]  |
+| **limit**    | **int32**  | The number of items to return      | [default to 20] |
 
 ### Return type
 
@@ -399,7 +399,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -429,12 +429,12 @@ func main() {
 Other parameters are passed through a pointer to a apiSearchTeamsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **nickname** | **string** | The nickname of a team on FACEIT | 
- **game** | **string** | A game on FACEIT | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name         | Type       | Description                      | Notes           |
+| ------------ | ---------- | -------------------------------- | --------------- |
+| **nickname** | **string** | The nickname of a team on FACEIT |
+| **game**     | **string** | A game on FACEIT                 |
+| **offset**   | **int32**  | The starting item position       | [default to 0]  |
+| **limit**    | **int32**  | The number of items to return    | [default to 20] |
 
 ### Return type
 
@@ -471,7 +471,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/mconnat/go-faceit"
 )
 
 func main() {
@@ -503,14 +503,14 @@ func main() {
 Other parameters are passed through a pointer to a apiSearchTournamentsRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string** | The name of a tournament on FACEIT | 
- **game** | **string** | A game on FACEIT | 
- **region** | **string** | A region of the game | 
- **type_** | **string** | Kind of competitions to return | 
- **offset** | **int32** | The starting item position | [default to 0]
- **limit** | **int32** | The number of items to return | [default to 20]
+| Name       | Type       | Description                        | Notes           |
+| ---------- | ---------- | ---------------------------------- | --------------- |
+| **name**   | **string** | The name of a tournament on FACEIT |
+| **game**   | **string** | A game on FACEIT                   |
+| **region** | **string** | A region of the game               |
+| **type_**  | **string** | Kind of competitions to return     |
+| **offset** | **int32**  | The starting item position         | [default to 0]  |
+| **limit**  | **int32**  | The number of items to return      | [default to 20] |
 
 ### Return type
 
